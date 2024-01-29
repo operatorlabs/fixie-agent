@@ -28,5 +28,5 @@ def entry(entry: Entry):
                     if turn['role'] == 'assistant' and turn['state'] == 'done':
                         for message in turn['messages']:
                             if message['state'] == 'done':
-                                return {"response": message['content']}
-    return {"response": "Error in processing request"}
+                                return {"message": message['content']}
+    return {"message": "Error in processing request"}
